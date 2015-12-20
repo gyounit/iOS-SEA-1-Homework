@@ -119,17 +119,21 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Goals" id="vTk-hs-mhz">
-                        <barButtonItem key="rightBarButtonItem" title="Info" id="TRH-QX-rxC"/>
+                        <barButtonItem key="rightBarButtonItem" title="Info" id="TRH-QX-rxC">
+                            <connections>
+                                <segue destination="dIU-D9-nhU" kind="show" id="RMt-gv-pli"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i7I-yX-OTr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1222" y="152"/>
+            <point key="canvasLocation" x="1222" y="136"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller (Info)-->
         <scene sceneID="Yjw-KR-1ey">
             <objects>
-                <viewController id="dIU-D9-nhU" sceneMemberID="viewController">
+                <viewController title="Info" id="dIU-D9-nhU" userLabel="View Controller (Info)" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Keq-M2-Utl"/>
                         <viewControllerLayoutGuide type="bottom" id="lzf-IV-tMy"/>
@@ -138,26 +142,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="Greg was born in Seattle,  Moved to San Francisco,   And now lives in Seattle again" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="o5p-GA-sjN">
-                                <rect key="frame" x="216" y="199" width="240" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jVI-Dn-4Yz">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jVI-Dn-4Yz">
                                 <rect key="frame" x="542" y="28" width="30" height="30"/>
                                 <state key="normal" title="X"/>
                                 <connections>
                                     <segue destination="PVg-xs-SIg" kind="show" id="Xw5-QG-uSN"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="Greg was born in Seattle,  Moved to San Francisco,   And now lives in Seattle again" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="o5p-GA-sjN">
+                                <rect key="frame" x="216" y="199" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="o5p-GA-sjN" firstAttribute="centerX" secondItem="DZc-II-Qgi" secondAttribute="centerX" constant="36" id="3ae-Gq-1nz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="jVI-Dn-4Yz" secondAttribute="trailing" constant="8" id="FYl-8t-IGU"/>
                             <constraint firstItem="jVI-Dn-4Yz" firstAttribute="top" secondItem="Keq-M2-Utl" secondAttribute="bottom" constant="8" id="iBI-bv-Q4t"/>
-                            <constraint firstItem="o5p-GA-sjN" firstAttribute="centerY" secondItem="DZc-II-Qgi" secondAttribute="centerY" constant="-37" id="wqN-0v-T6P"/>
+                            <constraint firstItem="o5p-GA-sjN" firstAttribute="centerY" secondItem="DZc-II-Qgi" secondAttribute="centerY" id="wqN-0v-T6P"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -165,10 +169,10 @@
             </objects>
             <point key="canvasLocation" x="535" y="168"/>
         </scene>
-        <!--View Controller-->
+        <!--Login-->
         <scene sceneID="tSy-5A-Fb9">
             <objects>
-                <viewController id="9g7-iB-UvS" sceneMemberID="viewController">
+                <viewController title="Login" id="9g7-iB-UvS" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SJj-8Q-UTB"/>
                         <viewControllerLayoutGuide type="bottom" id="4vF-tR-Do8"/>
@@ -252,4 +256,7 @@
         <image name="Pic of Greg" width="748" height="738"/>
         <image name="UW Logo" width="720" height="496"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="RMt-gv-pli"/>
+    </inferredMetricsTieBreakers>
 </document>
